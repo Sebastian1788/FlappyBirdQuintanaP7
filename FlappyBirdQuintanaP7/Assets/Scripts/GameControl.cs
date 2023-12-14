@@ -4,18 +4,18 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class GameControl : MonoBehaviour
 {
-    public static GameControl Instance;
+    public static GameControl instance;
     public GameObject gameOverText;
     public bool gameOver = false;
     public float scrollSpeed = -1.5f;
     // Start is called before the first frame update
     void Start()
     {
-        if (Instance == null)
+        if (instance == null)
         {
-            Instance = this;
+            instance = this;
         }
-        else if (Instance != this)
+        else if (instance != this)
         {
             Destroy (gameObject);
         }
